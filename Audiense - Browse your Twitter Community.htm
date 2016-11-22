@@ -1,0 +1,1624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="google-site-verification" content="O3rYbafblE_8YrUWwOGWvGfy39n9Lbq2fazd7xW8D-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <script type='text/javascript'>window.NREUM||(NREUM={});NREUM.info = {"agent":"","beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"31db26dc6d","applicationID":"14735068","applicationTime":6.725791,"transactionName":"NAMAMUJUWBJZAUBeCg1JLApCWFcNURhRUzARD01P","queueTime":0,"ttGuid":"a94984fed1b8e8","agentToken":null}; (window.NREUM||(NREUM={})).loader_config={xpid:"UgYPVFJUGwIEU1JXBwcP"};window.NREUM||(NREUM={}),__nr_require=function(t,e,n){function r(n){if(!e[n]){var o=e[n]={exports:{}};t[n][0].call(o.exports,function(e){var o=t[n][1][e];return r(o||e)},o,o.exports)}return e[n].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<n.length;o++)r(n[o]);return r}({1:[function(t,e,n){function r(t){try{c.console&&console.log(t)}catch(e){}}var o,i=t("ee"),a=t(15),c={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(c.console=!0,o.indexOf("dev")!==-1&&(c.dev=!0),o.indexOf("nr_dev")!==-1&&(c.nrDev=!0))}catch(s){}c.nrDev&&i.on("internal-error",function(t){r(t.stack)}),c.dev&&i.on("fn-err",function(t,e,n){r(n.stack)}),c.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(c,function(t,e){return t}).join(", ")))},{}],2:[function(t,e,n){function r(t,e,n,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,e,n)])}catch(c){try{i("ierr",[c,(new Date).getTime(),!0])}catch(s){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,e,n){this.message=t||"Uncaught error with no additional information",this.sourceURL=e,this.line=n}function o(t){i("err",[t,(new Date).getTime()])}var i=t("handle"),a=t(16),c=t("ee"),s=t("loader"),f=window.onerror,u=!1,d=0;s.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),s.xhrWrappable&&t(9),u=!0)}c.on("fn-start",function(t,e,n){u&&(d+=1)}),c.on("fn-err",function(t,e,n){u&&(this.thrown=!0,o(n))}),c.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),c.on("internal-error",function(t){i("ierr",[t,(new Date).getTime(),!0])})},{}],3:[function(t,e,n){t("loader").features.ins=!0},{}],4:[function(t,e,n){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),c=t(7),s="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState";t("loader").features.stn=!0,t(6);var g=NREUM.o.EV;o.on(m,function(t,e){var n=t[0];n instanceof g&&(this.bstStart=Date.now())}),o.on(w,function(t,e){var n=t[0];n instanceof g&&i("bst",[n,e,this.bstStart,Date.now()])}),a.on(m,function(t,e,n){this.bstStart=Date.now(),this.bstType=n}),a.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),this.bstType])}),c.on(m,function(){this.bstStart=Date.now()}),c.on(w,function(t,e){i(v,[e,this.bstStart,Date.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=Date.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+s]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+s]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+s]()},!1)),document[f]("scroll",r,!1),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,e,n){function r(t){for(var e=t;e&&!e.hasOwnProperty(u);)e=Object.getPrototypeOf(e);e&&o(e)}function o(t){c.inPlace(t,[u,d],"-",i)}function i(t,e){return t[1]}var a=t("ee").get("events"),c=t(17)(a,!0),s=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";e.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,e){var n=t[1],r=s(n,"nr@wrapped",function(){function t(){if("function"==typeof n.handleEvent)return n.handleEvent.apply(n,arguments)}var e={object:t,"function":n}[typeof n];return e?c(e,"fn-",null,e.name||"anonymous"):n});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,e,n){var r=t("ee").get("history"),o=t(17)(r);e.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,e,n){var r=t("ee").get("raf"),o=t(17)(r),i="equestAnimationFrame";e.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,e,n){function r(t,e,n){t[0]=a(t[0],"fn-",null,n)}function o(t,e,n){this.method=n,this.timerDuration="number"==typeof t[1]?t[1]:0,t[0]=a(t[0],"fn-",this,n)}var i=t("ee").get("timer"),a=t(17)(i),c="setTimeout",s="setInterval",f="clearTimeout",u="-start",d="-";e.exports=i,a.inPlace(window,[c,"setImmediate"],c+d),a.inPlace(window,[s],s+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(s+u,r),i.on(c+u,o)},{}],9:[function(t,e,n){function r(t,e){d.inPlace(e,["onreadystatechange"],"fn-",c)}function o(){var t=this,e=u.context(t);t.readyState>3&&!e.resolved&&(e.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,w,"fn-",c)}function i(t){v.push(t),h&&(g=-g,b.data=g)}function a(){for(var t=0;t<v.length;t++)r([],v[t]);v.length&&(v=[])}function c(t,e){return e}function s(t,e){for(var n in t)e[n]=t[n];return e}t(5);var f=t("ee"),u=f.get("xhr"),d=t(17)(u),l=NREUM.o,p=l.XHR,h=l.MO,m="readystatechange",w=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],v=[];e.exports=u;var y=window.XMLHttpRequest=function(t){var e=new p(t);try{u.emit("new-xhr",[e],e),e.addEventListener(m,o,!1)}catch(n){try{u.emit("internal-error",[n])}catch(r){}}return e};if(s(p,y),y.prototype=p.prototype,d.inPlace(y.prototype,["open","send"],"-xhr-",c),u.on("send-xhr-start",function(t,e){r(t,e),i(e)}),u.on("open-xhr-start",r),h){var g=1,b=document.createTextNode(g);new h(a).observe(b,{characterData:!0})}else f.on("fn-end",function(t){t[0]&&t[0].type===m||a()})},{}],10:[function(t,e,n){function r(t){var e=this.params,n=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!e.aborted){if(n.duration=(new Date).getTime()-this.startTime,4===t.readyState){e.status=t.status;var i=o(t,this.lastSize);if(i&&(n.rxSize=i),this.sameOrigin){var a=t.getResponseHeader("X-NewRelic-App-Data");a&&(e.cat=a.split(", ").pop())}}else e.status=0;n.cbTime=this.cbTime,f.emit("xhr-done",[t],t),c("xhr",[e,n,this.startTime])}}}function o(t,e){var n=t.responseType;if("json"===n&&null!==e)return e;var r="arraybuffer"===n||"blob"===n||"json"===n?t.response:t.responseText;return h(r)}function i(t,e){var n=s(e),r=t.params;r.host=n.hostname+":"+n.port,r.pathname=n.pathname,t.sameOrigin=n.sameOrigin}var a=t("loader");if(a.xhrWrappable){var c=t("handle"),s=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var e=this;e.totalCbs=0,e.called=0,e.cbTime=0,e.end=r,e.ended=!1,e.xhrGuids={},e.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){e.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,e){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&e.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,e){var n=this.metrics,r=t[0],o=this;if(n&&r){var i=h(r);i&&(n.txSize=i)}this.startTime=(new Date).getTime(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof e.onload))&&o.end(e)}catch(n){try{f.emit("internal-error",[n])}catch(r){}}};for(var a=0;a<d;a++)e.addEventListener(u[a],this.listener,!1)}),f.on("xhr-cb-time",function(t,e,n){this.cbTime+=t,e?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof n.onload||this.end(n)}),f.on("xhr-load-added",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&!this.xhrGuids[n]&&(this.xhrGuids[n]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,e){var n=""+l(t)+!!e;this.xhrGuids&&this.xhrGuids[n]&&(delete this.xhrGuids[n],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],e)}),f.on("removeEventListener-end",function(t,e){e instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],e)}),f.on("fn-start",function(t,e,n){e instanceof m&&("onload"===n&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=(new Date).getTime()))}),f.on("fn-end",function(t,e){this.xhrCbStart&&f.emit("xhr-cb-time",[(new Date).getTime()-this.xhrCbStart,this.onload,e],e)})}},{}],11:[function(t,e,n){e.exports=function(t){var e=document.createElement("a"),n=window.location,r={};e.href=t,r.port=e.port;var o=e.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=e.hostname||n.hostname,r.pathname=e.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!e.protocol||":"===e.protocol||e.protocol===n.protocol,a=e.hostname===document.domain&&e.port===n.port;return r.sameOrigin=i&&(!e.hostname||a),r}},{}],12:[function(t,e,n){function r(){}function o(t,e,n){return function(){return i(t,[(new Date).getTime()].concat(c(arguments)),e?null:this,n),e?void 0:this}}var i=t("handle"),a=t(15),c=t(16),s=t("ee").get("tracer"),f=NREUM;"undefined"==typeof window.newrelic&&(newrelic=f);var u=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit"],d="api-",l=d+"ixn-";a(u,function(t,e){f[e]=o(d+e,!0,"api")}),f.addPageAction=o(d+"addPageAction",!0),f.setCurrentRouteName=o(d+"routeName",!0),e.exports=newrelic,f.interaction=function(){return(new r).get()};var p=r.prototype={createTracer:function(t,e){var n={},r=this,o="function"==typeof e;return i(l+"tracer",[Date.now(),t,n],r),function(){if(s.emit((o?"":"no-")+"fn-start",[Date.now(),r,o],n),o)try{return e.apply(this,arguments)}finally{s.emit("fn-end",[Date.now()],n)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,e){p[e]=o(l+e)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,(new Date).getTime()])}},{}],13:[function(t,e,n){e.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(e){return}}}},{}],14:[function(t,e,n){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),e.exports=r},{}],15:[function(t,e,n){function r(t,e){var n=[],r="",i=0;for(r in t)o.call(t,r)&&(n[i]=e(r,t[r]),i+=1);return n}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],16:[function(t,e,n){function r(t,e,n){e||(e=0),"undefined"==typeof n&&(n=t?t.length:0);for(var r=-1,o=n-e||0,i=Array(o<0?0:o);++r<o;)i[r]=t[e+r];return i}e.exports=r},{}],17:[function(t,e,n){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",c=Object.prototype.hasOwnProperty,s=!1;e.exports=function(t,e){function n(t,e,n,o){function nrWrapper(){var r,a,c,s;try{a=this,r=i(arguments),c="function"==typeof n?n(r,a):n||{}}catch(f){l([f,"",[r,a,o],c])}u(e+"start",[r,a,o],c);try{return s=t.apply(a,r)}catch(d){throw u(e+"err",[r,a,d],c),d}finally{u(e+"end",[r,a,s],c)}}return r(t)?t:(e||(e=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,e,o,i){o||(o="");var a,c,s,f="-"===o.charAt(0);for(s=0;s<e.length;s++)c=e[s],a=t[c],r(a)||(t[c]=n(a,f?c+o:o,i,c))}function u(n,r,o){if(!s||e){var i=s;s=!0;try{t.emit(n,r,o)}catch(a){l([a,n,r,o])}s=i}}function d(t,e){if(Object.defineProperty&&Object.keys)try{var n=Object.keys(t);return n.forEach(function(n){Object.defineProperty(e,n,{get:function(){return t[n]},set:function(e){return t[n]=e,e}})}),e}catch(r){l([r])}for(var o in t)c.call(t,o)&&(e[o]=t[o]);return e}function l(e){try{t.emit("internal-error",e)}catch(n){}}return t||(t=o),n.inPlace=f,n.flag=a,n}},{}],ee:[function(t,e,n){function r(){}function o(t){function e(t){return t&&t instanceof r?t:t?s(t,c,i):i()}function n(n,r,o){if(!l.aborted){t&&t(n,r,o);for(var i=e(o),a=h(n),c=a.length,s=0;s<c;s++)a[s].apply(i,r);var f=u[y[n]];return f&&f.push([g,n,r,i]),i}}function p(t,e){v[t]=h(t).concat(e)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(n)}function w(t,e){f(t,function(t,n){e=e||"feature",y[n]=e,e in u||(u[e]=[])})}var v={},y={},g={on:p,emit:n,get:m,listeners:h,context:e,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var c="nr@context",s=t("gos"),f=t(15),u={},d={},l=e.exports=o();l.backlog=u},{}],gos:[function(t,e,n){function r(t,e,n){if(o.call(t,e))return t[e];var r=n();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,e,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[e]=r,r}var o=Object.prototype.hasOwnProperty;e.exports=r},{}],handle:[function(t,e,n){function r(t,e,n,r){o.buffer([t],r),o.emit(t,e,n)}var o=t("ee").get("handle");e.exports=r,r.ee=o},{}],id:[function(t,e,n){function r(t){var e=typeof t;return!t||"object"!==e&&"function"!==e?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");e.exports=r},{}],loader:[function(t,e,n){function r(){if(!b++){var t=g.info=NREUM.info,e=d.getElementsByTagName("script")[0];if(setTimeout(f.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&e))return f.abort();s(v,function(e,n){t[e]||(t[e]=n)}),c("mark",["onload",a()],null,"api");var n=d.createElement("script");n.src="https://"+t.agent,e.parentNode.insertBefore(n,e)}}function o(){"complete"===d.readyState&&i()}function i(){c("mark",["domContent",a()],null,"api")}function a(){return(new Date).getTime()}var c=t("handle"),s=t(15),f=t("ee"),u=window,d=u.document,l="addEventListener",p="attachEvent",h=u.XMLHttpRequest,m=h&&h.prototype;NREUM.o={ST:setTimeout,CT:clearTimeout,XHR:h,REQ:u.Request,EV:u.Event,PR:u.Promise,MO:u.MutationObserver},t(12);var w=""+location,v={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-998.min.js"},y=h&&m&&m[l]&&!/CriOS/.test(navigator.userAgent),g=e.exports={offset:a(),origin:w,features:{},xhrWrappable:y};d[l]?(d[l]("DOMContentLoaded",i,!1),u[l]("load",r,!1)):(d[p]("onreadystatechange",o),u[p]("onload",r)),c("mark",["firstbyte",a()],null,"api");var b=0},{}]},{},["loader",2,10,4,3]);</script>
+    <title>Audiense - Browse your Twitter Community</title>
+    <link href='https://dsh-cdn02.socialb.co/public/12.410.0/web/favicon.ico' rel='shortcut icon' type='image/x-icon'/>
+
+    <!-- Stylesheets -->
+    
+    <link rel="stylesheet" type="text/css" href="https://dsh-cdn02.socialb.co/public/12.410.0/app/themes/shiro/css/socialbro-min.css?v=12.410.0"/>
+    
+
+    <!--FirebugLite-->
+    
+    
+    <script crossorigin="anonymous" type="text/javascript"
+            src="https://dsh-cdn03.socialb.co/public/12.410.0/app/js/3rd-party-scripts.js?v=12.410.0"></script>
+    
+    <script type="text/javascript" src="https://www.google-analytics.com/analytics.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div id="container" style="display:none">
+    <header id="top_header" class="audiense-dashboard-header">
+
+        
+        <nav id="header_nav_menu" class="left audiense-dashboard-nav audiense-dashboard-nav--options">
+            <a id="logo" href="#" class="ml3 helptip" data-title="Home">
+                <svg class="icon audiense-dashboard-header-logo">
+                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense-logo"></use>
+                </svg>
+            </a>
+
+            
+            <a id="roothomebtn" href="#">Home</a>
+            <a id="searchbtn" href="#">My Community</a>
+            <a id="monitoringbtn" href="#" class="js-only-twitter">Monitoring</a>
+            <a id="reportsbtn" href="#" class="js-only-twitter js-blocked" data-feature="globalreports">Reports</a>
+            <a id="analyticsbtn" href="#" class="with-thin-caret"> Analytics </a>
+            <a id="engagementbtn" href="#" class="js-only-twitter with-thin-caret"> Engagement </a>
+            <a id="targetbtn" href="#" class="with-thin-caret"> Target </a>
+            <a id="twitteradsbtn" href="#" class="js-only-twitter js-enable-if-canAccessTwitterAds" data-title="Twitter Ads"
+                >Twitter Ads</a>
+            <a target="_blank" href="/app/profilings/0" class="js-only-twitter tester-mode-only tester-lv-9-clustering">
+                Clustering
+            </a>
+
+            <div id="toolsmenu" class="user_details_list"></div>
+            <div id="savedfiltersmenu" class="user_details_list"></div>
+            <div id="helpmenu" class="user_details_list"></div>
+        </nav>
+
+        
+        <nav class="right audiense-dashboard-nav audiense-dashboard-nav--icons">
+            <div class="audiense-dashboard-nav-wrapper">
+                <span id="editorbtn" class="js-tooltipped js-only-twitter dib cursor-pointer tooltipped tooltipped-s" aria-label="Tweets Editor">
+                    <svg class="icon icon-size-20">
+                        <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-tweet-editor"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="audiense-dashboard-nav-wrapper sb-menu-align-bottom">
+                <span id="help-menu-launcher" class="js-tooltipped dib cursor-pointer tooltipped tooltipped-s" aria-label="Help">
+                    <svg class="icon icon-size-16">
+                        <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-question-radius"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="audiense-dashboard-nav-wrapper sb-menu-align-bottom">
+                <span id="notifications-menu-launcher" class="dib cursor-pointer">
+                    <svg class="icon icon-size-16">
+                        <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-bell"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="audiense-dashboard-nav-wrapper sb-menu-align-bottom">
+                <span id="user-referrals-launcher" class="js-tooltipped cursor-pointer tooltipped tooltipped-multiline tooltipped-sw" aria-label="Spread the love of Audiense and gain Social Contacts">
+                    <svg class="icon icon-size-16 color-noticeable">
+                        <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-heart"></use>
+                    </svg>
+                </span>
+            </div>
+
+            <div class="audiense-dashboard-nav-wrapper sb-menu-align-bottom">
+                <span id="user-menu-launcher" class="with-thin-caret">
+                    <svg class="icon icon-size-16">
+                        <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-nut"></use>
+                    </svg>
+                </span>
+            </div>
+        </nav>
+
+        
+        <div id="nav-analyticsmenu" class="toolsMenu analyticsMenu newTopMenuContainer menu-level1">
+            <div id="" class="newTopMenu">
+                <div class="newTopMenuBlock">
+                    <ul>
+                        <li>
+                            <a href="#" data-id="stats">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-piechart"></use>
+                                </svg>
+                                Community Insights
+                                <small>Useful stats about your community</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="stats_online">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-chronometer"></use>
+                                </svg>
+                                Best time to tweet
+                                <small>Optimize every tweet you send</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="tweet-analytics" data-feature="analytics" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-barchart"></use>
+                                </svg>
+                                Tweet analytics
+                                <small>Analyze the content you share</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="realtime_stats">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-chrono-graph"></use>
+                                </svg>
+                                Real time analytics
+                                <small>Who is online now?</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="accounts_comparison" data-feature="comparison" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-scale"></use>
+                                </svg>
+                                Account comparison
+                                <small>Compare 3 communities’ stats</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="benchmark" data-feature="benchmark" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-log-list"></use>
+                                </svg>
+                                Benchmark
+                                <small>Compare your Twitter growth</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-id="retention-followers" data-feature="cohorts" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-magnet-alt"></use>
+                                </svg>
+                                Followers Retention/Churn
+                                <small>Analyze how many followers you keep/lose over time</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="nav-engagementmenu" class="toolsMenu engagementMenu newTopMenuContainer menu-level1">
+            <div id="" class="newTopMenu">
+                <div class="newTopMenuBlock">
+                    <ul>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="campaigns" data-feature="campaign" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-envelope"></use>
+                                </svg>
+                                Direct Message Campaigns
+                                <small>Send personalized DMs</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="ffhelper" data-feature="ffhelper" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-bubble-cog"></use>
+                                </svg>
+                                Mention Helper
+                                <small>Easily mention multiple users</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="stats_online">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-chronometer"></use>
+                                </svg>
+                                Best time to tweet
+                                <small>Optimize every tweet you send</small>
+                            </a>
+                        </li>
+                        <li id="latest_interactions" class="js-only-twitter">
+                            <a href="#" data-id="latest_interactions" data-feature="latest_interactions" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-at-radius"></use>
+                                </svg>
+                                Latest interactions
+                                <small>Visualize your interactions</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="instant-actions" data-feature="rules" class="js-blocked">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-ragdoll-arrow"></use>
+                                </svg>
+                                Rule Builder
+                                <small>Automate your Twitter tasks</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="nav-targetmenu" class="toolsMenu targetMenu newTopMenuContainer menu-level1">
+            <div id="" class="newTopMenu js-only-twitter">
+                <div class="newTopMenuBlock">
+                    <ul>
+                        <li>
+                            <a href="#" data-id="audience_manager">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-group-people"></use>
+                                </svg>
+                                Audience Manager
+                                <small>Create customized campaign audiences</small>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-id="discover">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-binoculars"></use>
+                                </svg>
+                                Discover new Twitter users
+                                <small>Find Twitter users to target</small>
+                            </a>
+                        </li>
+                        <li>
+                            <h2>Add Sources</h2>
+                            <ul>
+                                <li>
+                                    <a href="#" data-id="source_account">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-twitter"></use>
+                                        </svg>
+                                        Twitter account
+                                        <small>Analyze a 3rd party’s account</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter">
+                                    <a href="#" data-id="source_yourlist">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list"></use>
+                                        </svg>
+                                        Your Twitter lists
+                                        <small>Analyze members of your lists</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter">
+                                    <a href="#" data-id="source_list">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list-search"></use>
+                                        </svg>
+                                        Other Twitter lists
+                                        <small>Analyze members of a list</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter">
+                                    <a href="#" data-id="source_file">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-txt"></use>
+                                        </svg>
+                                        Text file
+                                        <small>Import users from a TXT file</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter">
+                                    <a href="#" data-id="source_email">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-usermail"></use>
+                                        </svg>
+                                        Convert emails into profiles
+                                        <small>View the profiles of your email contacts</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter tester-mode-only tester-lv-9-audiencetweets">
+                                    <a href="#" data-id="audience_from_tweetids">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-engagement"></use>
+                                        </svg>
+                                        Search by Tweet engagement
+                                        <small>Create an audience from people engaging with Tweets</small>
+                                    </a>
+                                </li>
+                                <li class="js-only-twitter">
+                                    <a href="#" data-id="source_rt_tweet">
+                                        <svg class="icon icon-size-20">
+                                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-rt"></use>
+                                        </svg>
+                                        Discover Retweeters
+                                        <small>Discover the users retweeting a tweet</small>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="toolsmenu-instagram" class="newTopMenu hide">
+                <div class="newTopMenuBlock">
+                    <ul>
+                        <li>
+                            <a href="#" data-id="discover">
+                                <svg class="icon icon-size-20">
+                                    <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-binoculars"></use>
+                                </svg>
+                                Discover new Instagram users
+                                <small>Find Instagram users to target</small>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div id="breadcrumb" class="breadcrumb-holder"></div>
+
+    <div id="sidebar-toggler" class="sidebar-toggler">
+        <svg class="icon"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-kebab"></use></svg>
+    </div>
+    <aside id="left_sidebar" style="width:0px">
+        <div id="left_sidebar_filter">
+            <div id="left_sidebar_top">
+                <div class="left_sidebar_searchbox">
+                    <form id="search_form">
+                        <label for="search_field" class="inlined"></label>
+                        <input type="text" class="search_text helptip search_field" id="f_query"
+                               placeholder="Search..."
+                               data-title="Try the advanced syntax: bio:socialmedia AND (location:london OR location:NYC)"
+                               maxLength="1000"/>
+                        <svg name="search_bt" id="search_bt" class="search_bt"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-search"></use></svg>
+
+                    </form>
+                    <div id="filter_form" style="display:none">
+                        <div class="filter_form_input_area">
+                            <label for="f_name">Name:</label>
+                            <input id="f_name" type="text" class="" name="f_name" maxLength="1000"/>
+                        </div>
+                        <div class="filter_form_input_area">
+                            <label for="f_bio">Bio:</label>
+                            <input id="f_bio" type="text" class="" name="f_bio" maxLength="1000"/>
+                        </div>
+                        <div class="filter_form_input_area js-only-twitter">
+                            <label for="f_location">Location: </label>
+                            <input id="f_location" type="text" class="" name="f_location"
+                                   maxLength="1000"/>
+                        </div>
+                        <a id="adv_search_bt" href="#"
+                           class="superbutton superbuttonCallToAction filter_bars_box_bt adv_search_bt">Search</a>
+                    </div>
+                </div>
+            </div>
+            <div id="left_sidebar_tabs_box">
+                <div id="tabs_bts_area">
+                    <div rel="search_bars_box" class="tabs_bt tabs_bt_on first_tab helptip p2" tabindex="2"
+                    data-title="Influence and activity filters">
+                        <svg class="search-tab-icon"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-filters"></use></svg>
+                    </div>
+
+                    <div rel="filter_bars_box" class="tabs_bt tabs_bt_off helptip p2" tabindex="3"
+                    data-title="Demographic filters">
+                        <svg class="search-tab-icon"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-demographics"></use></svg>
+                    </div>
+
+                    <div rel="custom_filters_bars_box" class="tabs_bt tabs_bt_off helptip p2" tabindex="4"
+                    data-title="My custom filters">
+                        <svg class="search-tab-icon"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-scissors"></use></svg>
+                    </div>
+
+                    <div rel="tags_bars_box" class="tabs_bt tabs_bt_off helptip p2" tabindex="5"
+                    data-title="My tags">
+                        <svg class="search-tab-icon"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-tag"></use></svg>
+                    </div>
+                </div>
+                <div id="left_sidebar_tabs_container">
+                    <div id="search_bars_box" class="search_bars_box" style="display: block">
+                        <form id="adv_search_form" class="clearfix" action="#">
+                            <ul>
+                                <li class="clearfix js-only-twitter">
+                                    <label class="title">Influence</label>
+                                    <strong id="f_influence_range" class="range clearfix">0
+                                        1000</strong>
+
+                                    <div id="f_influence" class="ui-slider">
+                                        <div id="f_influence_bg" class="ui-slider-range"></div>
+                                        <div id="f_influence_min" class="ui-slider-handle"></div>
+                                        <div id="f_influence_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <label class="title">Followers</label>
+                                    <strong id="f_followers_range" class="range clearfix"></strong>
+
+                                    <div id="f_followers" class="ui-slider">
+                                        <div id="f_followers_bg" class="ui-slider-range"></div>
+                                        <div id="f_followers_min" class="ui-slider-handle"></div>
+                                        <div id="f_followers_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <label class="title">Following</label>
+                                    <strong id="f_following_range" class="range clearfix"></strong>
+
+                                    <div id="f_following" class="ui-slider">
+                                        <div id="f_following_bg" class="ui-slider-range"></div>
+                                        <div id="f_following_min" class="ui-slider-handle"></div>
+                                        <div id="f_following_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix js-only-twitter">
+                                    <label class="title">List</label>
+                                    <strong id="f_lists_range" class="range clearfix"></strong>
+
+                                    <div id="f_lists" class="ui-slider">
+                                        <div id="f_lists_bg" class="ui-slider-range"></div>
+                                        <div id="f_lists_min" class="ui-slider-handle"></div>
+                                        <div id="f_lists_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix">
+                                    <label
+                                        class="title">Followers/Following Ratio</label>
+                                    <strong id="f_ratio_range" class="range clearfix"></strong>
+
+                                    <div id="f_ratio" class="ui-slider">
+                                        <div id="f_ratio_bg" class="ui-slider-range"></div>
+                                        <div id="f_ratio_min" class="ui-slider-handle"></div>
+                                        <div id="f_ratio_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix js-only-twitter">
+                                    <label class="title">Account Age</label>
+                                    <strong id="f_age_range" class="range clearfix"></strong>
+
+                                    <div id="f_age" class="ui-slider">
+                                        <div id="f_age_bg" class="ui-slider-range"></div>
+                                        <div id="f_age_min" class="ui-slider-handle"></div>
+                                        <div id="f_age_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix js-only-twitter">
+                                    <label class="title">Tweets per Day</label>
+                                    <strong id="f_tweets_range" class="range clearfix"></strong>
+
+                                    <div id="f_tweets" class="ui-slider">
+                                        <div id="f_tweets_bg" class="ui-slider-range"></div>
+                                        <div id="f_tweets_min" class="ui-slider-handle"></div>
+                                        <div id="f_tweets_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                                <li class="clearfix js-only-twitter">
+                                    <label
+                                        class="title">Time Since Last Tweet</label>
+                                    <strong id="f_lasttweet_range" class="range clearfix"></strong>
+
+                                    <div id="f_lasttweet" class="ui-slider">
+                                        <div id="f_lasttweet_bg" class="ui-slider-range"></div>
+                                        <div id="f_lasttweet_min" class="ui-slider-handle"></div>
+                                        <div id="f_lasttweet_max" class="ui-slider-handle"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </form>
+                        <div class="savefilter_bt clearfix">
+                            <a href="#"
+                               class="js-savefilter_bt superbutton superbuttonCallToAction filter_bars_box_bt">Save Filter</a>
+                            <a href="#"
+                               class="js-reset_bt superbutton filter_bars_box_bt">Reset</a>
+                        </div>
+                    </div>  <!-- search_bars_box End -->
+
+                    <!-- Filters Box Start -->
+                    <div id="filter_bars_box" style="display: none">
+                        <div class="filter_form_wrapper">
+                            <button id="f_timezone" data-id="timezone"
+                                    class="js-only-twitter btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Time Zones</span>
+                            </button>
+
+                            <button id="f_lang" data-id="language"
+                                    class="js-only-twitter btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Languages</span>
+                            </button>
+
+                            <button id="f_verified" data-id="verified"
+                                    class="js-only-twitter btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Users</span>
+                            </button>
+
+                            <button id="f_public" data-id="ispublic"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Profiles</span>
+                            </button>
+
+                            <button id="f_avatar" data-id="avatar"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Avatars</span>
+                            </button>
+
+                            <button id="f_url" data-id="url"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>URLs</span>
+                            </button>
+
+                            <button id="f_country" data-id="country"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0 js-only-twitter">
+                                <span>Country</span>
+                            </button>
+
+                            <button id="f_gender" data-id="gender"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Gender</span>
+                            </button>
+
+                            <button id="f_entity_type" data-id="entityType"
+                                    class="btn-base btn-contrast btn-caret align-left one-whole m0">
+                                <span>Entity Type</span>
+                            </button>
+
+                        </div>
+                        <div class="savefilter_bt clearfix">
+                            <a href="#"
+                               class="js-savefilter_bt superbutton superbuttonCallToAction filter_bars_box_bt">Save Filter</a>
+                            <a href="#"
+                               class="js-reset_bt superbutton filter_bars_box_bt">Reset</a>
+                        </div>
+                    </div><!-- Filters Box End -->
+
+                    <!-- Custom Filters Box Start -->
+                    <div id="custom_filters_bars_box" style="display: none">
+                        <div class="filter_form_wrapper">
+                            <ul id="custom_filters">
+                            </ul>
+                        </div>
+                    </div><!-- Custom Filters Box End -->
+
+                    <div id="tags_bars_box" style="display: none">
+                        <div class="filter_form_wrapper">
+                            <input type="text" id="search_tag" class="search_tab_input"
+                                   placeholder="Filter tags">
+                            <!-- Tags Box Start -->
+                            <ul id="tags_list"></ul>
+                        </div>
+                    </div>  <!-- Tags Box End -->
+                </div> <!-- left_sidebar_tabs_container -->
+            </div> <!-- left_sidebar_tabs_box -->
+        </div>
+        <div id="left_sidebar_user_details"></div>
+        <span class="version" id="version"></span>
+        <a href="http://e24apps.com" target="_blank" style="display:none;" class="copyright">&copy;
+            Audiense Ltd</a>
+
+        <p id="apicalls" class="twitter_msg"></p>
+    </aside><!-- /#featured -->
+    <div id="d_lists" class="menu uLBox-menuLists" style="display:none">
+        <ul class="js-menuContent uLBox-menu">
+            <li class="menu-item"><img src="https://dsh-cdn02.socialb.co/public/12.410.0/app/themes/shiro/img/ajax-loader.gif" width="16"
+                                       height="16" rel="loading"></li>
+        </ul>
+    </div>
+    <div id="main_center">
+        <div id="paginator_prev" class="paginator_prev helptip"
+             data-title="Go to previous page">
+            <svg class="icon">
+                <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-toggle"></use>
+            </svg>
+        </div>
+        <div id="paginator_next" class="paginator_next helptip"
+             data-title="Go to next page">
+            <svg class="icon">
+                <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-toggle"></use>
+            </svg>
+        </div>
+        <div id="users_content"></div><!-- /#content -->
+    </div>
+    <footer id="app_footer">
+        <div class="order_by_title">Order by:</div>
+        <div id="order_by_selected">
+            <span>Followers</span>
+        </div>
+        <div id="orderdir" data-title="Click to change order dir"
+             class="footer_arrow_up helptip"></div>
+        <!-- <div id="view_list" class="listview main_view_single helptip" rel="2" data-title="List view"></div> -->
+        <div id="view_details" class="listview main_view_single helptip f_active" rel="1"
+             data-title="Detailed view"></div>
+        <div id="view_grid" class="listview main_view_grid helptip f_active" rel="3"
+             data-title="Grid view"></div>
+
+        <ul class="f_users-options"
+            style="float: left;list-style: none;margin-top: 6px;margin-right: 20px;">
+            <li id="all_more">All Criteria<i class="f_arrow"></i></li>
+            <li id="fastfollow-bttn" class="fastfollow-bttn helptip"
+                data-title="Click this button or hold Shift down to activate Follow/Unfollow mode">Follow Mode</li>
+            <li id="selected_more">
+                <!--<a class="bulkfollow1" href="#">Follow</a>
+                <a class="bulkunfollow" href="#">Unfollow</a>-->
+                Selected (<span id="selected_more_count">0</span>)<i
+                    class="f_arrow"></i>
+            </li>
+        </ul>
+        <div id="paginator">
+            <ul>
+            </ul>
+            <span id="total" class="message message-succeed"></span>
+        </div>
+    </footer><!-- /#contentinfo -->
+    <div id="order_by_select_box" class="newMenu newBottomMenuContainer">
+        <div class="newBottomMenu">
+            <div class="newBottomMenuBlock" id="bottomMenuContainer">
+                <h1 class="newBottomMenuTitleBubble newBottomMenuBlockBorderFix">Order results</h1>
+                <ul id="">
+                    <li>
+                        <a rel="1" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Followers</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="2" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Following</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="order-by-posts-twitter" rel="3" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Tweets</span>
+                        </a>
+                        <a id="order-by-posts-instagram" rel="3" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Posts</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a rel="4" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Tweets per day</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a rel="5" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Date last tweet</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="8" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Date followed you</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a rel="9" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Date You followed</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a rel="7" href="#" class="dtf hundred percent">
+                            <span
+                                class="dtc hundred percent align-left">Influence</span>
+                        </a>
+                    </li>
+                    <!--<li class="js-only-twitter tester-mode-only tester-lv-3-sortinteractions">
+                <a rel="10" href="#"><span></span>Interactions</a>
+              </li>-->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div id="all_more_menu" class="newMenu newBottomMenuContainer">
+        <div class="newBottomMenu">
+            <div class="newBottomMenuBlock">
+                <h1 class="newBottomMenuTitleBubble newBottomMenuBlockBorderFix">Options for this criteria</h1>
+                <ul>
+                    <li>
+                        <a id="savefilter" href="#" data-feature="save_filters" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-filters"></use></svg>
+                            <span class="pl1">Save filter</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="bulkdm" href="#" data-feature="campaign" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-envelope"></use></svg>
+                            <span class="pl1">DM Campaign</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="bulkdmas" href="#" data-feature="campaign-as" class="tester-mode-only tester-lv-3-dmcampaignas">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-envelope"></use></svg>
+                            <span class="pl1">DM Campaign as...</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="bulkaddtolist" href="#" data-feature="list_management" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list-add"></use></svg>
+                            <span class="pl1">Add all to list</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="bulkremovefromlist" href="#" data-feature="list_management" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list-remove"></use></svg>
+                            <span class="pl1">Remove all from list</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="applytags_to_all" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-tag"></use></svg>
+                            <span class="pl1">Add tags to all</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="add_to_nimble_all" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-nimble"></use></svg>
+                            <span class="pl1">Add all to Nimble</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li id="watsonFeature" class="js-only-twitter" style="display: none">
+                        <a id="watsonreport" href="#" data-feature="watson_report" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-watson"></use></svg>
+                            <span class="pl1">Personality Insights</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="setbtttparams" href="#" data-feature="custom_bttt"
+                           class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-chronometer"></use></svg>
+                            <span class="pl1">Best time to tweet report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="custominsights" href="#" data-feature="custom_insights" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-piechart"></use></svg>
+                            <span class="pl1">Insights report</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <a id="pdfexport" href="#" data-feature="export" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-pdf-2"></use></svg>
+                            <span class="pl1">Export PDF</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="csvexport" href="#" data-feature="export" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-xls-2"></use></svg>
+                            <span class="pl1">Export XLSX</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="twitterAdsExport" href="#" data-feature="export"
+                           class="js-only-twitter js-blocked js-enable-if-canAccessTwitterAds">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-twitter-ads"></use></svg>
+                            <span class="pl1">Export Twitter Ads</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <a id="add_to_aggregated_all" class="js-blocked" href="#" data-feature="batch_management">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audience"></use></svg>
+                            <span class="pl1">Add To Audience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="remove_from_aggregated_all" class="js-blocked" href="#" data-feature="batch_management">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audience-remove"></use></svg>
+                            <span class="pl1">Remove From Audience</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="selected_more_menu" class="newMenu newBottomMenuContainer">
+        <div class="newBottomMenu">
+            <div class="newBottomMenuBlock">
+                <h1 class="newBottomMenuTitleBubble newBottomMenuBlockBorderFix">Options for this selection</h1>
+                <ul>
+                    <li>
+                        <a id="addWhiteList" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-add-whitelist"></use></svg>
+                            <span class="hundred percent pl3">Add to whitelist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="addBlackList" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-add-blacklist"></use></svg>
+                            <span class="hundred percent pl3">Add to blacklist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="removeWhiteList" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-remove-whitelist"></use></svg>
+                            <span class="hundred percent pl3">Remove from whitelist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="removeBlackList" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-remove-blacklist"></use></svg>
+                            <span class="hundred percent pl3">Remove from blacklist</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="hide">
+                        <a class="bulkfollow1 js-blocked" href="#" data-feature="batch_management">
+                            <span class="ico-fol"></span>
+                            <span class="hundred percent pl3">Follow</span>
+                        </a>
+                    </li>
+                    <li class="hide">
+                        <a class="bulkunfollow js-blocked" href="#" data-feature="batch_management">
+                            <span class="ico-unf"></span>
+                            <span class="hundred percent pl3">Unfollow</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="forceunfollow_selected" href="#" data-feature="batch_management"
+                           class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-plugin"></use></svg>
+                            <span class="hundred percent pl3">Force unfollow</span>
+                        </a>
+                    </li>
+                    <li>
+                        <hr>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="createlist1" href="#" data-feature="list_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list-add"></use></svg>
+                            <span class="hundred percent pl3">Add to list</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="removelist" href="#" data-feature="list_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-list-remove"></use></svg>
+                            <span class="hundred percent pl3">Remove from list</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="applytags" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-tag"></use></svg>
+                            <span class="hundred percent pl3">Add tags</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="add_to_nimble" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-nimble"></use></svg>
+                            <span class="hundred percent pl3">Add to Nimble</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <a id="block_selected" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-circle-line"></use></svg>
+                            <span class="hundred percent pl3">Block</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="unblock_selected" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-circle-check"></use></svg>
+                            <span class="hundred percent pl3">Unblock</span>
+                        </a>
+                    </li>
+
+                    <li class="js-only-twitter">
+                        <hr>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="mute_selected" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-speaker-line"></use></svg>
+                            <span class="hundred percent pl3">Mute</span>
+                        </a>
+                    </li>
+                    <li class="js-only-twitter">
+                        <a id="unmute_selected" href="#" data-feature="batch_management" class="js-blocked">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-speaker"></use></svg>
+                            <span class="hundred percent pl3">Un-mute</span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <hr>
+                    </li>
+                    <li>
+                        <a id="f_select_all" href="#">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-select-all"></use></svg>
+                            <span class="hundred percent pl3">Select all</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="f_unselect" href="#">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-unselect-all"></use></svg>
+                            <span class="hundred percent pl3">Unselect</span>
+                        </a>
+                    </li>
+                    <li class="">
+                        <hr>
+                    </li>
+                    <li>
+                        <a id="add_to_aggregated" class="js-blocked" href="#" data-feature="batch_management">
+                            <svg class="ico-small"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audience"></use></svg>
+                            <span class="hundred percent pl3">Add To Audience</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a id="remove_from_aggregated" class="js-blocked" href="#" data-feature="batch_management">
+                            <svg class="ico-small"><use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audience-remove"></use></svg>
+                            <span class="hundred percent pl3">Remove From Audience</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>  <!-- Content End -->
+
+<!-- Intro content block for Login and Register -->
+<div id="intro" class="login-holder">
+    <div id="homelogin">
+
+        <div class="login-background blur"><div class="login-background-cover"></div></div>
+        <div class="login">
+            <div class="login-header">
+                <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+            </div>
+            <div class="login-body">
+                <div class="js-notices">
+                </div>
+
+                <div class="field-group mb3">
+                    <div class="floated-label-field">
+                        <input type="text" id="loginemail" value="watthemehak@gmail.com"
+                               class="floated-field field-text hundred percent mb2"
+                               placeholder="Email">
+                        <label class="floated-label">Email</label>
+                    </div>
+                </div>
+                <div class="field-group mb3">
+                    <div class="input-group hundred percent mb2">
+                        <div class="floated-label-field">
+                            <input autofocus id="loginpw" autocomplete="off"
+                                                                     type="password"
+                                                                     class="floated-field field-text input-group-item hundred percent"
+                                                                     placeholder="Password">
+                            <label class="floated-label">Password</label>
+                        </div>
+                        <div class="input-group-item input-group-hint ten percent">
+                            <span class="field-checkbox is-fancy is-small mr1">
+                                <input type="checkbox" id="password" class="js-show-password"
+                                       data-target="loginpw"/>
+                                <label for="password"></label>
+                            </span>
+                            <label class="field-label"
+                                   for="password">Show</label>
+                        </div>
+                    </div>
+                    <a id="pwrecovery" href="#">Forgotten your password?</a>
+                    <button id="login_bt" href="#" class="btn-base btn-primary m0 forty percent right">Sign in</button>
+                </div>
+            </div>
+
+            <div class="login-footer">
+                <div class="mb3">
+                    Need an account?
+                    <a id="register_bt" href="https://buy.audiense.com/trial/new">Sign up now</a>
+                </div>
+                <div class="mb3">
+                    Help?
+                    <a href="http://audiense.com/contact">Contact us</a>
+                </div>
+                <div class="mb3">
+                        <ul class="login-locales s11">
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="es-ES">Spanish - Español</a>
+                                
+                            </li>
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="pt-BR">Portuguese - Português</a>
+                                
+                            </li>
+                        </ul>
+                </div>
+                <a href="https://business.twitter.com/partners/the-twitter-certified-program" class="login-certified-link">
+                    <i class="twitter-partner dib"></i>
+                </a>
+            </div>
+
+        </div>
+    </div>
+    <!-- Add Twitter -->
+    <section id="addtwitter" style="display: none">
+    </section>
+
+    <!-- New Password (TBD) -->
+    <!-- <section id="new-password" style="display: none">
+        <div class="login-box">
+            <h1 class="login-brand-full"></h1>
+            <div class="dt">
+                <div class="dtc">
+                    <h2 class="login-heading align-left">Crea una nueva contraseña para wadus@yimail.com</h2>
+                </div>
+                <div class="dtc">
+                    <i class="login-lock"></i>
+                </div>
+            </div>
+        </div>
+
+        <div class="login">
+
+            <div class="login-body">
+                <div class="field-group mb3">
+                    <div class="input-group hundred percent mb2">
+                        <div class="floated-label-field">
+                            <input id="password-field" type="password" class="floated-field field-text input-group-item hundred percent" placeholder="Contraseña" value="lol">
+                            <label class="floated-label">Contraseña</label>
+                        </div>
+                        <div class="input-group-item input-group-hint ten percent">
+                            <span class="field-checkbox is-fancy is-small mr1">
+                                <input type="checkbox" id="password" class="js-show-password" data-target="password-field" />
+                                <label for="password"></label>
+                            </span>
+                            <label class="field-label" for="password">Mostrar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field-group mb3">
+                    <div class="input-group hundred percent mb2">
+                        <div class="floated-label-field">
+                            <input id="password-field-conf" type="password" class="floated-field field-text input-group-item hundred percent" placeholder="Contraseña" value="lol">
+                            <label class="floated-label">Contraseña</label>
+                        </div>
+                        <div class="input-group-item input-group-hint ten percent">
+                            <span class="field-checkbox is-fancy is-small mr1">
+                                <input type="checkbox" id="password-conf" class="js-show-password" data-target="password-field-conf" />
+                                <label for="password-conf"></label>
+                            </span>
+                            <label class="field-label" for="password-conf">Mostrar</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="login-actions align-right">
+                    <a href="#" class="btn-base btn-primary m0">Crear nueva constraseña</a>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Select team section -->
+    <section id="select-team" style="display:none">
+        <div class="login">
+            <div class="login-header">
+                <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+
+                <h2 class="login-heading">Please note</h2>
+
+                <p class="s14 mt4">The mail <strong
+                        id="colaborator-email"></strong> is registered with a collaboration team.
+                </p>
+            </div>
+            <div class="login-body">
+                <div class="v-split"></div>
+                <div class="field-group mb3">
+                    <div class="input-group hundred percent mb2">
+                        <div class="field-select input-group-item hundred percent">
+                            <select id="collaborator-teams">
+                            </select>
+                        </div>
+                        <div class="input-group-item input-group-hint ten percent">
+                            <label>
+                                <a id="collaborator-join" class="parent-color"
+                                   href="">Join the team</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div><a id="collaborator-logout"
+                        href="#">logout</a> or <a
+                        href="https://buy.audiense.com/trial/new"
+                        target="_blank">create a new</a>  free account in Audiense
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password recovery -->
+    <section id="recovery-password" style="display: none">
+        <div class="login-background blur"><div class="login-background-cover"></div></div>
+        <div class="login">
+            <div class="login-header">
+                <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+
+                <div class="dt">
+                    <div class="dtc hundred percent">
+                        <h2 class="login-heading mrn4">Reset your password</h2>
+                    </div>
+                    <div class="dtc">
+                        <svg class="icon login-lock">
+                            <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-lock"></use>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+
+            <div class="login-body">
+                <div class="js-recovery-feedback login-feedback hide"></div>
+                <form class="js-form">
+                    <div class="js-notices">
+                    </div>
+
+                    <p class="mb2 recovery-reminder">You’ll receive an email with instructions on resetting your password.</p>
+
+                    <div class="field-group mb3">
+                        <div class="floated-label-field mb1">
+                            <input id="recoveremail" type="text"
+                                   class="floated-field field-text hundred percent mb2"
+                                   placeholder="Email">
+                            <label class="floated-label">Email</label>
+                        </div>
+
+                        <a id="recover_cancel_bt" href="#">Back to login</a>
+                        <button id="recover_bt" href="#" class="btn-base btn-primary m0 right">Send password request</button>
+                    </div>
+                </form>
+            </div>
+            <div class="login-footer">
+                <div class="mb3">
+                    Need an account?
+                    <a id="register_bt" href="https://buy.audiense.com/trial/new">Sign up now</a>
+                </div>
+                <div class="mb3">
+                    Help?
+                    <a href="http://audiense.com/contact">Contact us</a>
+                </div>
+                <div class="mb3">
+                        <ul class="login-locales s11">
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="es-ES">Spanish - Español</a>
+                                
+                            </li>
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="pt-BR">Portuguese - Português</a>
+                                
+                            </li>
+                        </ul>
+                </div>
+                <a href="https://business.twitter.com/partners/the-twitter-certified-program" class="login-certified-link">
+                    <i class="twitter-partner dib"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Password reset section -->
+    <section id="passwordreset" style="display: none">
+        <div class="login-background blur"><div class="login-background-cover"></div></div>
+        <div class="login" id="passwordresetform">
+            <div class="login-header">
+                <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+
+                <div class="dt">
+                    <div class="dtc hundred percent">
+                        <h2 class="login-heading mrn4">Create a new password for watthemehak@gmail.com</h2>
+                    </div>
+                    <div class="dtc">
+                        <i class="login-lock"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="login-body">
+                <div id="pwdresetmessage" class="hide">
+                    <div class="login-feedback">
+                        <h2 class="login-feedback-header">Password successfully created</h2>
+
+                        <p class="login-feedback-body">Thank you. You have created a new password for watthemehak@gmail.com and you can now use it in Audiense
+                            .</p>
+                        <a href="/#/login"
+                           class="js-back-to-login btn-base btn-success m0 thirty percent">Back to login</a>
+                    </div>
+                </div>
+
+                <form id="pwdresetform" class="js-form">
+                    <div class="js-notices">
+                        <div class="js-notice-message form-notice fade-in is-warning hide"></div>
+                        <div
+                            class="js-notice-message form-notice fade-in is-error hide">Error saving the new password, please try again
+                            .
+                        </div>
+                    </div>
+                    <div class="field-group mb3">
+                        <div class="input-group hundred percent mb3">
+                            <div class="floated-label-field">
+                                <input autofocus id="newresetpwd" autocomplete="off" type="password"
+                                       class="floated-field field-text input-group-item hundred percent"
+                                       placeholder="Write the new password">
+                                <label class="floated-label">Password</label>
+                            </div>
+                            <div class="input-group-item input-group-hint ten percent">
+                                  <span class="field-checkbox is-fancy is-small mr1">
+                                      <input type="checkbox" id="newresetpwdshow"
+                                             class="js-show-password" data-target="newresetpwd"/>
+                                      <label for="newresetpwdshow"></label>
+                                  </span>
+                                <label class="field-label"
+                                       for="newresetpwdshow">Show</label>
+                            </div>
+                        </div>
+                        <div class="input-group hundred percent mb2">
+                            <div class="floated-label-field">
+                                <input id="confirmresetpwd" autocomplete="off" type="password"
+                                       class="floated-field field-text input-group-item hundred percent"
+                                       placeholder="Write the new password again">
+                                <label class="floated-label">Password</label>
+                            </div>
+                            <div class="input-group-item input-group-hint ten percent">
+                                  <span class="field-checkbox is-fancy is-small mr1">
+                                      <input type="checkbox" id="confirmresetpwdshow"
+                                             class="js-show-password"
+                                             data-target="confirmresetpwd"/>
+                                      <label for="confirmresetpwdshow"></label>
+                                  </span>
+                                <label class="field-label"
+                                       for="confirmresetpwdshow">Show</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="login-actions dt">
+                        <div class="dtc align-left">
+                            <a id="reset_cancel_bt"
+                               href="/#/login">Back to login</a>
+                        </div>
+                        <div class="dtc">
+                            <button id="reset_bt" href="#"
+                                    class="btn-base btn-primary m0">Create the new password</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-footer">
+                <div class="mb3">
+                    Need an account?
+                    <a id="register_bt" href="https://buy.audiense.com/trial/new">Sign up now</a>
+                </div>
+                <div class="mb3">
+                    Help?
+                    <a href="http://audiense.com/contact">Contact us</a>
+                </div>
+                <div class="mb3">
+                        <ul class="login-locales s11">
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="es-ES">Spanish - Español</a>
+                                
+                            </li>
+                            <li class="login-locale">
+                                
+                                <a class="locale-link" href="#"
+                                   rel="pt-BR">Portuguese - Português</a>
+                                
+                            </li>
+                        </ul>
+                </div>
+                <a href="https://business.twitter.com/partners/the-twitter-certified-program" class="login-certified-link">
+                    <i class="twitter-partner dib"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Two factor authentication section -->
+    <section id="two-factor-auth" style="display: none">
+      <div class="login-background blur"><div class="login-background-cover"></div></div>
+      <div class="login mt2 p2 t-c">
+        <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+        <div class="py2" style="margin: 0 auto;">
+          <h2 class="login-heading mb4">Two-factor authentication</h2>
+
+            <div class="t-r w-90 ml3">
+              <span class="left s14">Authentication code</span>
+              <a href="#">What&#39;s this?</a>
+
+              <input id="2fa-code" class="input-base w-100 mt2" autocomplete="off"/>
+
+              <a href="#" id="js-back-login" class="left mt2">Back to login</a>
+              <button id="js-verify-2fa" class="btn btn-primary mt2 w-40">Verify</button>
+              <div class="m0 mt3 mb3 s13 t-l">
+                <svg class="icon icon-size-20 di w-5 left mr2"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-technology"></use></svg>
+                <div class="di">Open Google Authenticator on your device to view your authentication code.</div>
+              </div>
+
+              <hr/>
+
+              <div class="t-l">
+                <div class="bolder mt3 mb2 s14 w-90">Don´t have your phone?</div>
+                <a id="js-go-enter-recovery-code" href="#">Enter recovery code</a>
+              </div>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Enter recovery code section -->
+    <section id="js-enter-recovery-code" style="display: none">
+      <div class="login-background blur"><div class="login-background-cover"></div></div>
+      <div class="login mt2 p2 t-c">
+        <svg class="ico-small login-brand-svg"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-audiense"></use></svg>
+        <div class="py2" style="margin: 0 auto;">
+          <h2 class="login-heading mb4">Enter recovery code</h2>
+
+            <div class="t-r w-90 ml3">
+              <span class="left s14">Recovery code</span>
+
+              <input id="js-recovery-code-input" class="input-base w-100 mt2" autocomplete="off"/>
+
+              <a href="#" id="js-back-to-2fa" class="left mt2">Back to two-factor authentication</a>
+              <button id="js-verify-recovery-code" class="btn btn-primary mt2 w-40">Verify</button>
+
+              <div class="m0 mt3 mb3 s13 t-l">
+                <svg class="icon icon-size-20 di w-5 left mr2"> <use xlink:href="https://dashboard.audiense.com/svg/defs.svg#icon-lock"></use></svg>
+                <div class="di">Enter one of your recovery codes if you don&#39;t have access to your mobile device.</div>
+              </div>
+
+            </div>
+
+        </div>
+    </section>
+
+</div>
+<div class="flashmsg-wrapper">
+    <div id="flashmsg-container" class="flashmsg-container"></div>
+</div>
+<div id="notifications" style="display:block;"></div>
+<div id="nav-toolsmenu" class="toolsMenu newMenu newTopMenuContainer menu-level1">
+    <div id="toolsmenu-twitter" class="newTopMenu hide">
+        <div class="newTopMenuBlock">
+            <h1 class="newTopMenuTitleBubble newTopMenuTitleBubbleFirst">Analytics</h1>
+            <ul>
+                <li class="js-only-twitter tester-mode-only tester-lv-3-globalreports">
+                    <a href="#" data-id="globalreports"><span
+                            class="ico-rep"></span>Reports
+                        <br/>
+                        <small>Create reports and monitor previous reports</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-id="stats"><span
+                            class="ico-ci"></span>Community Insights
+                        <br/>
+                        <small>Useful stats about your community</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="stats_online"><span
+                            class="ico-bttt"></span>Best time to tweet
+                        <br/>
+                        <small>Optimize every tweet you send</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="tweet-analytics"><span
+                            class="ico-ta"></span>Tweet analytics<br/>
+                        <small>Analyze the content you share</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="realtime_stats"><span
+                            class="ico-rta"></span>Real time analytics
+                        <br/>
+                        <small>Who is online now?</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="accounts_comparison"><span
+                            class="ico-ac"></span>Account comparison
+                        <br/>
+                        <small>Compare 3 communities’ stats</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="benchmark"><span
+                            class="ico-bm"></span>Benchmark
+                        <br/>
+                        <small>Compare your Twitter growth</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-id="retention-followers"><span
+                            class="ico-rf"></span>Followers Retention/Churn
+                        <br/>
+                        <small>Analyze how many followers you keep/lose over time</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="newTopMenuBlock">
+            <h1 class="newTopMenuTitleBubble">Engagement</h1>
+            <ul>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="campaigns"><span
+                            class="ico-dmc"></span>Direct Message Campaigns
+                        <br/>
+                        <small>Send personalized DMs</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="ffhelper"><span
+                            class="ico-mhlp"></span>Mention Helper
+                        <br/>
+                        <small>Easily mention multiple users</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="stats_online"><span
+                            class="ico-bttt"></span>Best time to tweet
+                        <br/>
+                        <small>Optimize every tweet you send</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="latest_interactions"><span
+                            class="ico-li"></span>Latest interactions
+                        <br/>
+                        <small>Visualize your interactions</small>
+                    </a>
+                </li>
+                <li class="js-only-twitter">
+                    <a href="#" data-id="instant-actions"><span
+                            class="ico-fbr"></span>Rule Builder
+                        <br/>
+                        <small>Automate your Twitter tasks</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="newTopMenuBlock">
+            <h1 class="newTopMenuTitleBubble newTopMenuTitleBubbleLast">Target</h1>
+            <ul>
+                <li>
+                    <a href="#" data-id="discover"><span
+                            class="ico-dntu"></span>Discover new Twitter users
+                        <br/>
+                        <small>Find Twitter users to target</small>
+                    </a>
+                </li>
+                <li>
+                    <h2>Add Sources</h2>
+                    <ul>
+                        <li>
+                            <a href="#" data-id="source_account"><span
+                                    class="ico-tac"></span>Twitter account
+                                <br/>
+                                <small>Analyze a 3rd party’s account</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_tweet"><span
+                                    class="ico-ts"></span>Twitter search
+                                <br/>
+                                <small>View users tweeting about X</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_yourlist"><span
+                                    class="ico-ytl"></span>Your Twitter lists
+                                <br/>
+                                <small>Analyze members of your lists</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_list"><span
+                                    class="ico-otl"></span>Other Twitter lists
+                                <br/>
+                                <small>Analyze members of a list</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_file"><span
+                                    class="ico-tf"></span>Text file<br/>
+                                <small>Import users from a TXT file</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_email"><span
+                                    class="ico-ef"></span>Convert emails into profiles
+                                <br/>
+                                <small>View the profiles of your email contacts</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_geo"><span
+                                    class="ico-gls"></span>Geolocated search
+                                <br/>
+                                <small>Find local users to target</small>
+                            </a>
+                        </li>
+                        <li class="js-only-twitter">
+                            <a href="#" data-id="source_rt_tweet"><span
+                                    class="ico-rtt"></span>Tweet
+                                <br/>
+                                <small>Add a tweet as a source to find the users who have retweeted it</small>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="toolsmenu-instagram" class="newTopMenu hide">
+        <div class="newTopMenuBlock">
+            <h1 class="newTopMenuTitleBubble newTopMenuTitleBubbleFirst newTopMenuTitleBubbleLast">Instagram</h1>
+            <ul>
+                <li>
+                    <a href="#" data-id="stats"><span
+                            class="ico-ci"></span>Community Insights
+                        <br/>
+                        <small>Useful stats about your community</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-id="discover"><span
+                            class="ico-dntu"></span>Discover new Instagram users
+                        <br/>
+                        <small>Find Instagram users to target</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-id="source_account"><span
+                            class="ico-igram"></span>Instagram account
+                        <br/>
+                        <small>Analyze a 3rd party’s account</small>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" data-id="retention-followers"><span
+                            class="ico-rf"></span>Followers Retention/Churn
+                        <br/>
+                        <small>Analyze how many followers you keep/lose over time</small>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div> <!-- /menu -->
+
+<script crossorigin="anonymous" type="text/javascript" src="https://dashboard.audiense.com/js/config.js?locale=en-US&subdomain="></script>
+<script crossorigin="anonymous" type="text/javascript" src="https://dsh-cdn04.socialb.co/public/12.410.0/app/js/socialbro-min.js?v=12.410.0"></script>
+
+
+
+
+<script type='text/javascript'>
+    //Google analytics
+    if (window.ga) {
+        ga('create', 'UA-1696092-31', 'auto', {'allowLinker': true});
+        ga('require', 'linker');
+        ga('linker:autoLink', ['www.audiense.com', 'es.audiense.com', 'buy.audiense.com', 'comprar.audiense.com']);
+        ga('require', 'linkid', 'https://www.google-analytics.com/plugins/ua/linkid.js');
+        ga('send', 'pageview');
+    }
+</script>
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+<script src="https://apis.google.com/js/client.js"></script>
+
+
+
+    <script src="https://use.typekit.net/evv8xwk.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+
+</body>
+</html>

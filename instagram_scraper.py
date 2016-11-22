@@ -1,5 +1,6 @@
 ''' Instagram Scraper
 @Harris Christiansen (HarrisChristiansen.com)
+@Mehak Vohra (watthemehak.com)
 November 2016
 '''
 from bs4 import BeautifulSoup
