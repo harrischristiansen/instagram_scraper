@@ -9,10 +9,11 @@ Python script to scrape for email addresses of influencers on Instagram.
 
 ## Features
 
-- [X] Scrape webpage with Beautiful Soup
 - [ ] Authenticate with server
-- [ ] Get description
-- [ ] Get email address
+- [X] Scrape webpage with Beautiful Soup
+- [ ] Iterate through pages
+- [X] Get bios
+- [X] Get email addresses
 
 ## Contributors
 
