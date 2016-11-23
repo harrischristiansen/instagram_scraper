@@ -10,7 +10,7 @@ import Cookie
 import cookielib
 import re
 
-url = "https://dashboard.audiense.com/?email=watthemehak%40gmail.com&_ga=1.246766148.1374939999.1479356195#!272441706/self//search/"
+url = 'https://dashboard.audiense.com/?email=watthemehak%40gmail.com&_ga=1.246766148.1374939999.1479356195#!272441706/self//search/{"ub":9,"a":"Youtuber","b":"@gmail.com","p":"1","i":"2","ge":"F","e_t":"P","f_f":1000,"f_t":50000,"fi_f":150,"fi_t":20000}'
 br = mechanize.Browser
 html_content = urllib2.urlopen(url).read()
 
